@@ -14,6 +14,11 @@ app.layout=html.Div(children=[
                  id='region-dropdown',searchable=True,clearable=True
                  ,style={'width':150,'display':'inline-block'}
                  )],style={'display':'flex'}),
+html.Div(children=[html.P('Gender')
+,dcc.Dropdown(customer_df['Gender'].unique(),
+                 id='gender-dropdown',searchable=True,clearable=True
+                 ,style={'width':150,'display':'inline-block'}
+                 )],style={'display':'flex'}),
 html.Div(children=[    html.P('Job Classification')
 ,dcc.Dropdown(customer_df['Job Classification'].unique(),
                  id='classification-dropdown',searchable=True,clearable=True
